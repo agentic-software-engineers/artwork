@@ -10,8 +10,6 @@
 
 The logo comes in four layouts, each in up to four versions, as PNG and SVG. The **horizontal** and **stacked** layouts set the name beside or below the ship, the **icon** is the ship alone, and the **full** logo carries the name on the hull. Use **color** on light backgrounds, **color, white text** on dark ones, and **white** or **black** where only one colour prints.
 
-_Note: GitHub Flavored Markdown does not support background colours, so the white logos below show on the table's own background._
-
 <table>
     <tr>
         <th></th>
