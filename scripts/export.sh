@@ -25,9 +25,17 @@ if [ ! -d "$bin" ]; then
   tar -xzf "$archive" -C "$bin" --strip-components=1
 fi
 
+# rootful Docker runs the CLI as the calling user, so it writes files that user owns without any capability;
+# rootless Docker already maps the container's root to that user
+user=
+if ! docker info --format '{{.SecurityOptions}}' | grep -q rootless; then
+  user="--user $(id -u):$(id -g)"
+fi
+
 # run the CLI with the repo as its only writable mount and no network
 vc() {
-  docker run --rm --network none --read-only --tmpfs /tmp --cap-drop ALL --security-opt no-new-privileges \
+  # shellcheck disable=SC2086 # user is either empty or one flag with its value
+  docker run --rm --network none --read-only --tmpfs /tmp --cap-drop ALL --security-opt no-new-privileges $user \
     -v "$bin:/opt/vc:ro" -v "$root:/w" "$IMAGE" /opt/vc/bin/vectorcraft-cli "$@" >/dev/null
 }
 
