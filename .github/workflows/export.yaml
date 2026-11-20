@@ -1,0 +1,29 @@
+name: Check exports
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+# stop a run once a newer push to the same pull request or branch supersedes it
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  export:
+    runs-on: ubuntu-latest
+    steps:
+      # check out the masters and the files rendered from them
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      # render every file again from the masters with the pinned VectorCraft
+      - run: ./scripts/export.sh
+
+      # fail when a committed file differs from what its master renders
+      - run: git diff --exit-code --stat
