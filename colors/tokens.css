@@ -1,0 +1,10 @@
+/* Agentic Software Engineers: brand colours. Signal Teal, Current Cyan and Ocean Blue are sampled from the logo. */
+:root {
+  --ase-harbor-night: #0d0f0f;
+  --ase-signal-teal: #4bdfcb;
+  --ase-current-cyan: #27bbe5;
+  --ase-ocean-blue: #3798dc;
+  --ase-deep-ocean: #3b6fe0;
+  --ase-foam: #f5fafa;
+  --ase-tide: linear-gradient(135deg, var(--ase-signal-teal), var(--ase-current-cyan) 45%, var(--ase-deep-ocean));
+}
