@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.2](https://github.com/agentic-software-engineers/artwork/compare/v0.1.1...v0.1.2) (2026-11-21)
+
+
+### Features
+
+* **logo:** add the ship with its full hull ([#9](https://github.com/agentic-software-engineers/artwork/issues/9)) ([98dc931](https://github.com/agentic-software-engineers/artwork/commit/98dc931f7ab8ac632d25164de7a82eb747a96856))
+
 ## [0.1.1](https://github.com/agentic-software-engineers/artwork/compare/v0.1.0...v0.1.1) (2026-11-21)
 
 
