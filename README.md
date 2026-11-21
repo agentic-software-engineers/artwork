@@ -73,6 +73,13 @@ The logo comes in four layouts, each in up to four versions, as PNG and SVG. The
     </tr>
 </table>
 
+## Parts
+
+| | Color | White | Black |
+| --- | :---: | :---: | :---: |
+| Ship | <img src="logo/parts/ship/color.svg" width="120"> | <img src="logo/parts/ship/white.svg" width="120"> | <img src="logo/parts/ship/black.svg" width="120"> |
+| Wave | <img src="logo/parts/wave/color.svg" width="120"> | <img src="logo/parts/wave/white.svg" width="120"> | <img src="logo/parts/wave/black.svg" width="120"> |
+
 ## Icons
 
 | File | Size | Use |
